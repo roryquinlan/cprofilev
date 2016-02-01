@@ -188,7 +188,7 @@ def main():
         help='The python script file to run and profile.',
         metavar="scriptfile")
 
-    args = parser.parse_args()
+    args, remaining_argv = parser.parse_known_args()
     if not sys.argv[1:]:
         parser.print_help()
         sys.exit(2)
